@@ -17,6 +17,7 @@ namespace Entities {
       try {
         switch(option) {
           case 1: CreateFile(); break;
+          case 2: ListFiles(); break;
         }
       } catch (FileException ex) {
         Console.WriteLine("Error: " + ex.Message);
@@ -28,7 +29,7 @@ namespace Entities {
     public void CreateFile() {
       Console.Write("\nEnter file path: ");
       string path = Console.ReadLine();
-      FileHandler.Path = path;
+      FileHandler.path = path;
       
       Console.Write("Enter the file name: ");
       string filename = Console.ReadLine();
@@ -47,6 +48,19 @@ namespace Entities {
 
       if (option == 'y') FileHandler.CreateFile(filename, TextEditor.Text.ToString());
       else Init();
+    }
+
+    public void ListFiles() {
+      Console.Write("\nEnter file path: ");
+      string path = Console.ReadLine();
+      FileHandler.path = path;
+
+      Console.WriteLine();
+      var files = FileHandler.GetFilesName();
+
+      for(int i = 0; i < files.Count; i++) {
+        Console.WriteLine($"{i + 1} - {files[i]}");
+      }
     }
   }
 }
