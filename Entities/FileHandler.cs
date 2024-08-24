@@ -2,10 +2,10 @@ using System.Text;
 
 namespace Entities {
   class FileHandler {
-    public string Path {get; private set;}
+    public string Path {get; set;} = string.Empty;
     public void CreateFile(string fileName, string content) {
       using(StreamWriter sw = File.AppendText(Path + @"\" + fileName)) {
-        sw.WriteLine(content);
+        sw.Write(content);
       }
     }
 

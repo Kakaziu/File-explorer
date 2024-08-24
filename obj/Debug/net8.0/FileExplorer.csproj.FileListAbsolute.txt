@@ -1,0 +1,15 @@
+C:\Users\kauab\c_sharp_projects\FileExplorer\bin\Debug\net8.0\FileExplorer.exe
+C:\Users\kauab\c_sharp_projects\FileExplorer\bin\Debug\net8.0\FileExplorer.deps.json
+C:\Users\kauab\c_sharp_projects\FileExplorer\bin\Debug\net8.0\FileExplorer.runtimeconfig.json
+C:\Users\kauab\c_sharp_projects\FileExplorer\bin\Debug\net8.0\FileExplorer.dll
+C:\Users\kauab\c_sharp_projects\FileExplorer\bin\Debug\net8.0\FileExplorer.pdb
+C:\Users\kauab\c_sharp_projects\FileExplorer\obj\Debug\net8.0\FileExplorer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kauab\c_sharp_projects\FileExplorer\obj\Debug\net8.0\FileExplorer.AssemblyInfoInputs.cache
+C:\Users\kauab\c_sharp_projects\FileExplorer\obj\Debug\net8.0\FileExplorer.AssemblyInfo.cs
+C:\Users\kauab\c_sharp_projects\FileExplorer\obj\Debug\net8.0\FileExplorer.csproj.CoreCompileInputs.cache
+C:\Users\kauab\c_sharp_projects\FileExplorer\obj\Debug\net8.0\FileExplorer.sourcelink.json
+C:\Users\kauab\c_sharp_projects\FileExplorer\obj\Debug\net8.0\FileExplorer.dll
+C:\Users\kauab\c_sharp_projects\FileExplorer\obj\Debug\net8.0\refint\FileExplorer.dll
+C:\Users\kauab\c_sharp_projects\FileExplorer\obj\Debug\net8.0\FileExplorer.pdb
+C:\Users\kauab\c_sharp_projects\FileExplorer\obj\Debug\net8.0\FileExplorer.genruntimeconfig.cache
+C:\Users\kauab\c_sharp_projects\FileExplorer\obj\Debug\net8.0\ref\FileExplorer.dll
