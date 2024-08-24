@@ -6,6 +6,7 @@ namespace Entities {
     public TextEditor TextEditor {get; set;} = new TextEditor();
   
     public void Init() {
+      Console.Clear();
       Console.WriteLine("File explorer");
       Console.WriteLine("1 - Create file");
       Console.WriteLine("2 - List all files");
@@ -34,6 +35,7 @@ namespace Entities {
 
       if(File.Exists(path + @"\" + filename)) throw new FileException("Este arquivo já existe na pasta.");
 
+      Console.Clear();
       Console.WriteLine("Write your file (Press ESC to exit)");
 
       do{
@@ -43,7 +45,8 @@ namespace Entities {
       Console.Write("\nWant to save de file? (y = yes / n = no): ");
       char option = char.Parse(Console.ReadLine());
 
-      if (option == 'y') FileHandler.CreateFile(filename, TextEditor.Text);
+      if (option == 'y') FileHandler.CreateFile(filename, TextEditor.Text.ToString());
+      else Init();
     }
   }
 }

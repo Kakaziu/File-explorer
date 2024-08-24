@@ -2,11 +2,10 @@ using System.Text;
 
 namespace Entities {
   class TextEditor {
-    public string Text {get; private set;} = string.Empty;
-
+    public StringBuilder Text {get; private set;} = new StringBuilder();
+  
     public void ToWrite() {
-      Text += Console.ReadLine();
-      Text += Environment.NewLine;
+      Text.AppendLine(Console.ReadLine());
     }
   }
 }
