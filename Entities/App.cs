@@ -1,3 +1,5 @@
+using Entities.Exceptions;
+
 namespace Entities {
   class App {
     public FileHandler FileHandler {get; set;} = new FileHandler();
@@ -11,8 +13,14 @@ namespace Entities {
       Console.WriteLine("0 - Exit");
       short option = short.Parse(Console.ReadLine());
 
-      switch(option) {
-        case 1: CreateFile(); break;
+      try {
+        switch(option) {
+          case 1: CreateFile(); break;
+        }
+      } catch (FileException ex) {
+        Console.WriteLine("Error: " + ex.Message);
+        Console.ReadLine();
+        Init();
       }
     } 
 
@@ -23,6 +31,8 @@ namespace Entities {
       
       Console.Write("Enter the file name: ");
       string filename = Console.ReadLine();
+
+      if(File.Exists(path + @"\" + filename)) throw new FileException("Este arquivo já existe na pasta.");
 
       Console.WriteLine("Write your file (Press ESC to exit)");
 
