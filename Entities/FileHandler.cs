@@ -1,9 +1,10 @@
 using System.Text;
+using Entities.Exceptions;
 
 namespace Entities {
   class FileHandler {
     public string path {get; set;} = string.Empty;
-    public void CreateFile(string fileName, string content) {
+    public void WriteFile(string fileName, string content) {
       using(StreamWriter sw = File.AppendText(path + @"\" + fileName)) {
         sw.Write(content);
       }
@@ -19,6 +20,13 @@ namespace Entities {
       }
 
       return sb.ToString();
+    }
+
+    public void DeleteFile(string fileName) {
+      string filePath = path + @"\" + fileName;
+
+      if (File.Exists(filePath)) File.Delete(filePath);
+      else throw new FileException("O arquivo não existe.");
     }
 
     public List<string> GetFilesName() {

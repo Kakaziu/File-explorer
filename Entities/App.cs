@@ -18,6 +18,7 @@ namespace Entities {
         switch(option) {
           case 1: CreateFile(); break;
           case 2: ListFiles(); break;
+          case 0: System.Environment.Exit(0); break;
         }
       } catch (FileException ex) {
         Console.WriteLine("Error: " + ex.Message);
@@ -46,7 +47,7 @@ namespace Entities {
       Console.Write("\nWant to save de file? (y = yes / n = no): ");
       char option = char.Parse(Console.ReadLine());
 
-      if (option == 'y') FileHandler.CreateFile(filename, TextEditor.Text.ToString());
+      if (option == 'y') FileHandler.WriteFile(filename, TextEditor.Text.ToString());
       else Init();
     }
 
