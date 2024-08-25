@@ -7,5 +7,9 @@ namespace Entities {
     public void ToWrite() {
       Text.AppendLine(Console.ReadLine());
     }
+
+    public void SetText(string text) {
+      Text.Append(text);
+    }
   }
 }
