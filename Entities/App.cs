@@ -4,6 +4,10 @@ namespace Entities {
   class App {
     public FileHandler FileHandler {get; set;} = new FileHandler();
     public TextEditor TextEditor {get; set;} = new TextEditor();
+
+    public App(string basePath) {
+      FileHandler.path = basePath;
+    }
   
     public void Init() {
       Console.Clear();
@@ -28,14 +32,10 @@ namespace Entities {
     } 
 
     public void CreateFile() {
-      Console.Write("\nEnter file path: ");
-      string path = Console.ReadLine();
-      FileHandler.path = path;
-      
       Console.Write("Enter the file name: ");
       string filename = Console.ReadLine();
 
-      if(File.Exists(path + @"\" + filename)) throw new FileException("Este arquivo já existe na pasta.");
+      if(File.Exists(FileHandler.path + @"\" + filename)) throw new FileException("Este arquivo já existe na pasta.");
 
       Console.Clear();
       Console.WriteLine("Write your file (Press ESC to exit)");
@@ -52,10 +52,6 @@ namespace Entities {
     }
 
     public void ListFiles() {
-      Console.Write("\nEnter file path: ");
-      string path = Console.ReadLine();
-      FileHandler.path = path;
-
       Console.WriteLine();
       var files = FileHandler.GetFilesName();
 
